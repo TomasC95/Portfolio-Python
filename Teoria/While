@@ -1,0 +1,33 @@
+Similar al for es un bucle repetitivo, con la diferencia de que no necesariamente esta linkeado o relacionado con una lista
+Se utilizan condiciones ==> Una condicion similar a la de una instruccion inferior ==> a<v ; a < b and c > y
+
+mientras se cumple la condicion:
+    repito proceso 
+   
+while(condicion):
+    procedimiento
+
+# Me ingresan alturas de personas ==> Numero flotante, mayor o igual cero y menor a 3m
+
+altura = float(input("Ingresar la altura de la persona (0-3m): "))
+
+while(altura < 0 or altura > 3):
+    altura = float(input("Oops! Valor invalido! Ingresar la altura de la persona (0-3m): "))
+
+
+# Averiguar cuantas veces debo multiplicar por 3 un numero para que supere 10mil
+
+cant_veces = 0
+
+#Ingresas dato
+numero = float(input("Ingresar el numero (0-+inf): "))
+#Validas
+while(numero <= 0):
+    numero = float(input("Oops! Valor invalido! Ingresar el numero (0-+inf): "))
+
+while(numero < 10000):
+    numero = numero * 3
+    cant_veces = cant_veces + 1
+
+print("Multiplique " + str(cant_veces) " veces")
+

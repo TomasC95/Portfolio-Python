@@ -1,0 +1,12 @@
+Distintos tipos de variables
+Variables numericas: Int(Enteros), Float(numeros con coma)
+Variables complejas: String(Palabra) "str", Char(Letra), Diccionarios(Muy similares a los famosos diccionarios como el Oxford), Listas(Como la lista del supermercado)
+
+type() ==> Es una funcion que me va a decir de que tipo es una variables
+
+
+print("Hola mundo") ==> Imprime en pantalla el hola mundo
+print(numero1)      ==> Imprime el contenido de numero1
+
+resultado = 5 * 3 - 5 / 2
+print("El resultado es: " + str(resultado) + " -- con los numeros " + str(5) + " y " + str(6))

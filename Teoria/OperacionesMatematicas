@@ -1,0 +1,38 @@
++ suma
+- resta
+* multiplicacion
+/ division
+% resto de division entera ==> 4 % 2 = 0 .. 5 % 2 = 1 ==> Se usa para identificar numeros pares o multiplos de
+sin cos tg
+pow(2,3) 2 a la 3 ==>  2 ** 3 ==> Se puede tener una base entera y un exponente fraccionario
+sqrt(4) = 2 ==> Raiz cuadrada ==> Para raices de otro grado usamos pow con exponente fraccionario
+
+(2 * pow(2,3)) - (4 * 6) ==> Se respeta la presedencia matematica, siempre teniendo cuidado con pow y sqrt
+
+
+Comparar resultados
+
+a>b a<b  >= y <=
+== (Es igual)
+!= (Es distinto)
+not (a == b)+
+
+Los numeros flotantes son como una casta superior
+resultado_flotante = numero_flotante * numero_flotante / numero_flotante ==> Toda la operacion debe ser de numeros flotantes
+Cualquier entero en una cuenta que quiero que me de un flotante, produce un resultado entero.
+Cuando tengo una constante (la programo a mano) ==> 10.0 , 2.0
+
+numero = 2
+resultado = 2.0 * 4.0 / numero        ==> Entero
+resultado = 2.0 * 4.0 / float(numero) ==> Flotante
+
+Cast de variables ==> El casteo nos permite modificar el tipo de una variables
+
+int(4.999999999) ==> 4
+
+porcentaje = (casosFavorables / Casostotales) * 100
+
+
+
+
+

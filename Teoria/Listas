@@ -1,0 +1,33 @@
+# Hasta ahora teniamos variables simples
+numero = 1
+numero = 2
+# Las listas en python se asemejan a las listas del super, te permiten guardar varios elementos de forma ordenada y no perder registro de ninguno
+listasuper="Harina|Huevos|Azucar"
+
+# Las variables del tipo lista
+lista_1 = list()
+type(lista_1) => <List>
+
+
+# Una de las aplicaciones de listas es con la funcion range(rango)
+range(10,12) ==> Todos los numeros entre 10 y 12, sin incluir el 12 (10 11)
+range(10)    ==> Todos los numeros entre 0 y 10 , sin incluir el 10 (0 1 2 3 4 5 6 7 8 9)
+Tamaño =  limite superior - limite inferior
+
+Matematicamente range = [limite_inferior,limite_superior)
+
+
+# Operaciones con listas
+append()  ==> Agregar un nuevo elemento al final de mi lista
+lista_1.append()
+
+lista_1.count()
+lista_1.remove()
+lista_1.copy()
+
+
+
+
+
+
+

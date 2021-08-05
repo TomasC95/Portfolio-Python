@@ -1,0 +1,9 @@
+# For traducido es para
+lista = range(10)
+
+# x (variable que declaro yo en el momento) va a tomar todos los valores de la lista
+# La operacion se ejecuta el 'tamaño de la lista' veces
+
+for x in lista:
+    operacion
+

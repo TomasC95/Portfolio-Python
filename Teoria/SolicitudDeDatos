@@ -1,0 +1,12 @@
+input() ==> Le va a pedir al usuario que nos ingrese un dato que vamos a guardar en variables
+
+
+numero = int(input("Ingresar el numero: ")) 
+numero = float(input("Ingresar el numero: ")) 
+Input es de las pocas instrucciones adonde le tenemos que avisar a python que tipo de dato necesito.
+Por defecto el tipo de dato es string.
+
+
+F(x) = 2X + 1
+
+F(x) = 1
