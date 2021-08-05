@@ -7,3 +7,5 @@ for x in range(6):
 numeros_ordenados.sort()
 print("Los numeros ganadores son: " + str(numeros_ordenados))
 
+print("Hola")
+
