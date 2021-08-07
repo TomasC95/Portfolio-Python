@@ -1,0 +1,8 @@
+Estar en una connsolo del tipo git bash
+Subir nuevos cambios
+git add . ==> Sirve para actualizar las carpetas y archivos
+git commit -m "Mensaje"
+git push
+
+Descargar cambios
+git pull

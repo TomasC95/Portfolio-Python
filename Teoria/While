@@ -31,3 +31,6 @@ while(numero < 10000):
 
 print("Multiplique " + str(cant_veces) " veces")
 
+
+/*Tanto el break como el continue funcionan exactamente igual para el while como el for*/
+break ==> Es la salida emergencia, se ejecuta y salgo del bucle
