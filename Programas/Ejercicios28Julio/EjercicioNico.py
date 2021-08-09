@@ -7,8 +7,6 @@ Edades = list()
 Provincias = list()
 
 
-
-
 for registro in range(1001):
     Identificacion = int(input("Número de ID : "))
     if Identificacion == 0:

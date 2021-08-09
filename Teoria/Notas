@@ -1,0 +1,5 @@
+1 == True == (1 == 1) == (5 == 5) == (True == True)
+
+0 == False == (1 == 0)
+
+while(False): % Nunca se ejecuta

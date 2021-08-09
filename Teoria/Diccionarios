@@ -1,0 +1,56 @@
+Un conjunto de campos bajo una etiqueta:
+
+nicolas = {
+    "nombre" : "Nicolas",
+    "edad"   : 40,
+    "peso"   : 70,
+ }
+
+nicolas["peso"] = 75
+nicolas.update({"peso": 50})
+
+
+nicolas["Celu"] = "1150048510"
+
+for x in vacunados:
+    x["Celu"] = input("")
+
+nicolas["edad"]
+
+del vacunados["nicolas"]
+
+vacunados = {
+    "nicolas": {
+        "nombre" : "Nicolas",
+        "edad"   : 40,
+        "peso"   : 70
+    }
+    "tomas": {
+        "nombre" : "Tomas",
+        "edad"   : 50,
+        "peso"   : 60
+    }
+    "carlos": {
+        "nombre" : "Carlos",
+        "edad"   : 50,
+        "peso"   : 60
+    }
+}
+
+persona = vacunados["carlos"]
+persona["edad"]
+
+%Metodos
+
+Metodo get
+
+x = vacunados.get("nicolas") ==> Me devuelve el diccionario de una etiqueta
+
+Keys
+x = vacunados.keys()         ==> Me devuelve una lista de todas las keys de mi diccionario
+
+Values
+x = nicolas.values()
+
+
+if("Juan bautista 335" in vacunados.values()):
