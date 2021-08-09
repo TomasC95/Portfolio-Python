@@ -1,5 +1,5 @@
 # Registro de Vacunados por COVID-19
-from statistics import mode
+
 
 Identificaciones = list()
 Dosis_Guardadas = list()
@@ -9,7 +9,7 @@ Provincias = list()
 
 
 
-for registro in range(1001):
+while True:
     Identificacion = int(input("Número de ID : "))
     if Identificacion == 0:
         break
@@ -24,8 +24,8 @@ for registro in range(1001):
     Edades.append(Edad)
     Provincias.append(Provincia)
 
-print("La edad que mas vacunas recibió es : " + str(mode(Edades)))
-print("La provincia que mas vacunas recibió es : " + str(mode(Provincias)))
-print("La cantidad de personas que recibieron la 2da dosis es : " + str(mode(Dosis_Guardadas))) 
-print("De " + str(len(Identificaciones)) + " personas ingresadas, un : " +  + " porciento completo el esquema.")
+print("La edad que mas vacunas recibió es : " + str(Edades))
+print("La provincia que mas vacunas recibió es : " + str(Provincias))
+print("La cantidad de personas que recibieron la 2da dosis es : " + str((Dosis_Guardadas)) 
+#print("De " + str(len(Identificaciones)) + " personas ingresadas, un : " +  + " porciento completo el esquema.")
 
