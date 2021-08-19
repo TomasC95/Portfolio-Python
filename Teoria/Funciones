@@ -1,0 +1,65 @@
+Es un procedimiento extraido o abstraido en un formato funcional.
+
+
+recepcionista()
+
+if(analizasafisfaccion() > 3):
+    llevabolsos()
+else:
+    lossacamos()
+
+Nos permite tener una interpretacion mucho mas sencilla y leible de lo que hace un algoritmo complejo.
+
+
+Evita repetitividad de codigo
+
+recepcionista()
+
+if(analizasafisfaccion() > 3):
+    llevabolsos(habitacion)
+else:
+    llevabolsos(calle)
+    lossacamos()
+
+
+compraSuper.append("Ravioles")
+....
+compraSuper.append("Radicheta")
+
+
+Como declaramos funciones? ==> Que me devuelve? (Algo en pantalla, un archivo, suba algo a internet, descargue algo de internet, me un resultado)
+                           ==> Que le doy a la funcion? Parametros
+
+resultado = resolver_cuadratica()
+
+
+
+
+def funcion_uno():
+    print("Hola soy la funcion uno")
+    print("Hola soy la funcion uno!")
+    print("Hola soy la funcion uno!")
+
+def sumar_numeros_yavisarsiesmayora100():
+    resultado = numero1 + numero2
+    if(resultado > 100):
+        return True
+    else:
+        return False
+
+
+sumar_numeros(5,3)
+
+def sumar_numeros(numero1,numero2):
+    resultado = numero1 + numero2
+    return resultado
+
+
+def resolver_cuadratica():
+    raiz1 = a+b+sqrt()
+    raiz2 = a-b+sqrt()
+    return [raiz1,raiz2]
+
+def NOMBRE_FUNCION(PARAM1,PARAM2,PARAM3):
+    CODIGO
+    return 
