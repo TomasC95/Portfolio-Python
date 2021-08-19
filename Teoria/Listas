@@ -25,6 +25,10 @@ lista_1.count()
 lista_1.remove()
 lista_1.copy()
 
+Las listas se componen de datos que pueden ser distintos. No necesariamente necesito tener los mismos tipos de dato. 
+
+
+
 
 
 

@@ -6,9 +6,6 @@ Dosis_Guardadas = list()
 Edades = list()
 Provincias = list()
 
-
-
-
 while True:
     Identificacion = int(input("Número de ID : "))
     if Identificacion == 0:

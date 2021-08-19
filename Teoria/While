@@ -1,5 +1,8 @@
 Similar al for es un bucle repetitivo, con la diferencia de que no necesariamente esta linkeado o relacionado con una lista
+
 Se utilizan condiciones ==> Una condicion similar a la de una instruccion inferior ==> a<v ; a < b and c > y
+
+No esta limitado en un numero estricto de veces, tiempo o tamaño sino que es hasta que se deje de cumplir una x condicion.
 
 mientras se cumple la condicion:
     repito proceso 
