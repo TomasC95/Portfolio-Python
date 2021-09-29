@@ -26,9 +26,26 @@ def crear_juego(representacion):
 
     '''Opcion  1 (Dolorosa)  ==> Trabajo con for e ir cargando mi lista'''
     '''Opcion  2 (Investigo) ==> Utilizar la operacion split (operacion de listas, similar a append)'''
+
     
-    pass
-    
+    matriz = [
+        [0, 0, 3,  0, 2, 0,  6, 0, 0],
+        [9, 0, 0,  3, 0, 5,  0, 0, 1],
+        [0, 0, 1,  8, 0, 6,  4, 0, 0],
+        [0, 0, 8,  1, 0, 2,  9, 0, 0],
+        [7, 0, 0,  0, 0, 0,  0, 0, 8],
+        [0, 0, 6,  7, 0, 8,  2, 0, 0],
+        [0, 0, 2,  6, 0, 9,  5, 0, 0],
+        [8, 0, 0,  2, 0, 3,  0, 0, 9],
+        [0, 0, 5,  0, 1, 0,  3, 0, 0]]
+
+    for fila in range(9):
+        for columna in range(9):
+            print(matriz[fila][columna], end = ' ')
+        print()
+        
+        
+
 def hay_valor_en_fila(sudoku, fila, valor):
     '''
     Devuelve True si ya hay un casillero con el valor
@@ -38,7 +55,12 @@ def hay_valor_en_fila(sudoku, fila, valor):
     siguientes celdas:
     (3, 0), (3, 1), (3, 2), (3, 3), (3, 4), (3, 5), (3, 6), (3, 7), (3, 8)
     '''
-    pass    
+    
+    
+    while (valor == 'valor' in 'fila'):
+        return 
+
+    
     
 def hay_valor_en_columna(sudoku, columna, valor):
     '''
