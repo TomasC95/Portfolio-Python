@@ -38,9 +38,13 @@ def crear_juego(representacion):
         [0, 0, 2,  6, 0, 9,  5, 0, 0],
         [8, 0, 0,  2, 0, 3,  0, 0, 9],
         [0, 0, 5,  0, 1, 0,  3, 0, 0]]
+    
+    vacio = None
 
     for fila in range(9):
         for columna in range(9):
+            if (matriz[fila][columna] == 0):
+                matriz[fila][columna] = vacio
             print(matriz[fila][columna], end = ' ')
         print()
         
