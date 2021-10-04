@@ -28,26 +28,25 @@ def crear_juego(representacion):
     '''Opcion  2 (Investigo) ==> Utilizar la operacion split (operacion de listas, similar a append)'''
 
     
-    matriz = [
-        [0, 0, 3,  0, 2, 0,  6, 0, 0],
-        [9, 0, 0,  3, 0, 5,  0, 0, 1],
-        [0, 0, 1,  8, 0, 6,  4, 0, 0],
-        [0, 0, 8,  1, 0, 2,  9, 0, 0],
-        [7, 0, 0,  0, 0, 0,  0, 0, 8],
-        [0, 0, 6,  7, 0, 8,  2, 0, 0],
-        [0, 0, 2,  6, 0, 9,  5, 0, 0],
-        [8, 0, 0,  2, 0, 3,  0, 0, 9],
-        [0, 0, 5,  0, 1, 0,  3, 0, 0]]
-    
-    vacio = None
+    mapa_aleatorio = random.randrange(0,10)
 
-    for fila in range(9):
-        for columna in range(9):
-            if (matriz[fila][columna] == 0):
-                matriz[fila][columna] = vacio
-            print(matriz[fila][columna], end = ' ')
-        print()
-        
+    entrada = MAPAS[1]
+    matriz = entrada.split('\n')
+    del matriz[0]
+    del matriz[-1]
+
+    posicion = len(matriz[0])
+
+    matriz_final        = [ ]
+    lista_parcial = list()
+
+    for l in range(9): 
+        for i in matriz[l]:
+            lista_parcial.append(int(i))
+        matriz_final.append(lista_parcial)
+        lista_parcial = []
+
+    return matriz_final
         
 
 def hay_valor_en_fila(sudoku, fila, valor):
@@ -59,10 +58,11 @@ def hay_valor_en_fila(sudoku, fila, valor):
     siguientes celdas:
     (3, 0), (3, 1), (3, 2), (3, 3), (3, 4), (3, 5), (3, 6), (3, 7), (3, 8)
     '''
+    for i in sudoku[fila]:
+        
     
     
-    while (valor == 'valor' in 'fila'):
-        return 
+    return 
 
     
     
@@ -183,3 +183,5 @@ def hay_movimientos_posibles(sudoku):
     al menos una posible inserción.
     '''
     pass
+
+sudoku = crear_juego(MAPAS[0])
