@@ -48,6 +48,9 @@ def crear_juego(representacion):
 
     return matriz_final
         
+# print(hay_valor_en_fila(matriz_final, 0, 4))
+# matriz[fila][columna]
+
 
 def hay_valor_en_fila(sudoku, fila, valor):
     '''
@@ -59,10 +62,9 @@ def hay_valor_en_fila(sudoku, fila, valor):
     (3, 0), (3, 1), (3, 2), (3, 3), (3, 4), (3, 5), (3, 6), (3, 7), (3, 8)
     '''
     for i in sudoku[fila]:
-        
-    
-    
-    return 
+        if(i == valor):
+            return True
+    return False
 
     
     
