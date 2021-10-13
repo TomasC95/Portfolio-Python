@@ -1,3 +1,5 @@
+import random 
+from mapas import MAPAS
 
 def crear_juego(representacion):
     '''
