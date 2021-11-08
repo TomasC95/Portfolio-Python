@@ -1,5 +1,12 @@
+<<<<<<< HEAD
+import random
+from typing import Collection 
+from mapas import MAPAS
+
+=======
 import random 
 from mapas import MAPAS
+>>>>>>> b3d7e86faf47bff82a8a29689c2be2047e68991c
 
 def crear_juego(representacion):
     '''
@@ -30,9 +37,10 @@ def crear_juego(representacion):
     '''Opcion  2 (Investigo) ==> Utilizar la operacion split (operacion de listas, similar a append)'''
 
     
-    mapa_aleatorio = random.randrange(0,10)
+    
 
-    entrada = MAPAS[1]
+    mapa_aleatorio = random.randrange(0,10)
+    entrada = random.choice(MAPAS)
     matriz = entrada.split('\n')
     del matriz[0]
     del matriz[-1]
@@ -50,9 +58,7 @@ def crear_juego(representacion):
 
     return matriz_final
         
-# print(hay_valor_en_fila(matriz_final, 0, 4))
-# matriz[fila][columna]
-
+        
 
 def hay_valor_en_fila(sudoku, fila, valor):
     '''
@@ -63,6 +69,8 @@ def hay_valor_en_fila(sudoku, fila, valor):
     siguientes celdas:
     (3, 0), (3, 1), (3, 2), (3, 3), (3, 4), (3, 5), (3, 6), (3, 7), (3, 8)
     '''
+    
+    
     for i in sudoku[fila]:
         if(i == valor):
             return True
@@ -79,7 +87,10 @@ def hay_valor_en_columna(sudoku, columna, valor):
     siguientes celdas:
     (0, 3), (1, 3), (2, 3), (3, 3), (4, 3), (5, 3), (6, 3), (7, 3), (8, 3)
     '''
-    pass
+    for i in sudoku[columna]:
+        if(i == valor):
+            return True
+    return False
             
 def obtener_origen_region(fila, columna):
     '''
@@ -101,11 +112,18 @@ def obtener_origen_region(fila, columna):
 
     Las celdas marcadas con un (*) son las celdas que deberá 
     devolver esta función para la correspondiente región.
-
+d
     Por ejemplo, para la posición (fila = 1, columna = 4) la función
     deberá devolver (0, 3).
     '''
-    pass
+
+    #return fila // 3 * 3 , (columna // 3) * 3
+
+    for fila in range(9):
+        f = int(fila/3)
+        for columna in range(9):
+            c = int(columna/3)
+    return f,c
     
 def hay_valor_en_region(sudoku, fila, columna, valor):
     '''
@@ -119,7 +137,10 @@ def hay_valor_en_region(sudoku, fila, columna, valor):
     si está `valor` en todas las siguientes celdas:
     (0, 0), (0, 1) (0, 2), (1, 0), (1, 1), (1, 2), (2, 0), (2, 1), (2, 2).
     '''
-    pass
+    for region in sudoku[fila,columna]:
+        if valor == valor:
+            return True
+    return False
 
 def es_movimiento_valido(sudoku, fila, columna, valor):
     '''
@@ -135,7 +156,10 @@ def es_movimiento_valido(sudoku, fila, columna, valor):
     
     No modifica el Sudoku recibido.
     '''
-    pass
+    for i in sudoku:
+        if valor != sudoku[fila,columna] and i != valor:
+            return True
+        return False
 
 def insertar_valor(sudoku, fila, columna, valor):
     '''
@@ -187,5 +211,3 @@ def hay_movimientos_posibles(sudoku):
     al menos una posible inserción.
     '''
     pass
-
-sudoku = crear_juego(MAPAS[0])
