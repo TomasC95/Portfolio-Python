@@ -1,12 +1,8 @@
-<<<<<<< HEAD
 import random
 from typing import Collection 
 from mapas import MAPAS
 
-=======
-import random 
-from mapas import MAPAS
->>>>>>> b3d7e86faf47bff82a8a29689c2be2047e68991c
+
 
 def crear_juego(representacion):
     '''
@@ -38,10 +34,12 @@ def crear_juego(representacion):
 
     
     
-
+    #Elijo un mapita al azar
     mapa_aleatorio = random.randrange(0,10)
     entrada = random.choice(MAPAS)
-    matriz = entrada.split('\n')
+    
+    #Arrancamos a trabajar con la matriz
+    matriz = entrada.split('\n') # Armamos una lista por fila
     del matriz[0]
     del matriz[-1]
 
@@ -87,8 +85,8 @@ def hay_valor_en_columna(sudoku, columna, valor):
     siguientes celdas:
     (0, 3), (1, 3), (2, 3), (3, 3), (4, 3), (5, 3), (6, 3), (7, 3), (8, 3)
     '''
-    for i in sudoku[columna]:
-        if(i == valor):
+    for fila in sudoku:
+        if(fila[columna] == valor):
             return True
     return False
             
@@ -117,14 +115,16 @@ d
     deberá devolver (0, 3).
     '''
 
-    #return fila // 3 * 3 , (columna // 3) * 3
-
+    return (fila // 3 , (columna // 3) * 3) #La mejor opcion!
+    
+    '''
     for fila in range(9):
         f = int(fila/3)
         for columna in range(9):
             c = int(columna/3)
-    return f,c
-    
+    return (f,c)
+    '''
+
 def hay_valor_en_region(sudoku, fila, columna, valor):
     '''
     Devuelve True si hay hay algún casillero con el valor `valor`
@@ -137,10 +137,15 @@ def hay_valor_en_region(sudoku, fila, columna, valor):
     si está `valor` en todas las siguientes celdas:
     (0, 0), (0, 1) (0, 2), (1, 0), (1, 1), (1, 2), (2, 0), (2, 1), (2, 2).
     '''
-    for region in sudoku[fila,columna]:
-        if valor == valor:
-            return True
+
+    fila_,columna_ = obtener_origen_region(fila,columna)
+
+    for j in range(3):
+        for q in range(3):
+            if(sudoku[j+fila_][q+columna_] == valor):
+                return True
     return False
+
 
 def es_movimiento_valido(sudoku, fila, columna, valor):
     '''
@@ -156,10 +161,11 @@ def es_movimiento_valido(sudoku, fila, columna, valor):
     
     No modifica el Sudoku recibido.
     '''
-    for i in sudoku:
-        if valor != sudoku[fila,columna] and i != valor:
-            return True
+    if(not hay_valor_en_fila(sudoku,fila,valor) and not hay_valor_en_columna(sudoku,columna,valor) and not hay_valor_en_region(sudoku,fila,columna,valor)):
+        return True
+    else:
         return False
+
 
 def insertar_valor(sudoku, fila, columna, valor):
     '''
@@ -170,6 +176,7 @@ def insertar_valor(sudoku, fila, columna, valor):
     con el valor cambiado. En caso contrario se devolverá el
     mismo Sudoku que se recibió por parámetro.
     '''
+    
     pass
 
 def borrar_valor(sudoku, fila, columna):
